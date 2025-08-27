@@ -4,41 +4,79 @@ using UnityEngine;
 
 public class chessPiece : MonoBehaviour
 {
-  //  public GameObject bishop;
-    //  public List<GameObject> chessType;
-    // Start is called before the first frame update
-    void Start()
+  public enum classType
+  {
+    Bishop,
+    Horse,
+    King,
+    Queen,
+    Rook,
+    Pawn
+  }
+
+  //[SerializedField] classType ClassType = new classType();
+  public classType ClassType = new classType();
+
+  // Start is called before the first frame update
+  void Start()
+  {
+   /* switch (ClassType)
     {
-        // chessType = new List<GameObject>();
-
-        /* chessType.Add("Bishop");
-         chessType.Add("Horse");
-         chessType.Add("King");
-         chessType.Add("Queen");
-         chessType.Add("Rook");
-         chessType.Add("Unknown");*/
-
-    }
+      case classType.Bishop:
+        //code
+        break;
+      case classType.Horse:
+        //code
+        break;
+      case classType.King:
+        //code
+        break;
+      case classType.Queen:
+        //code
+        break;
+      case classType.Rook:
+        Gizmos.DrawLine(transform.position, Vector3.forward);
+        Gizmos.DrawLine(transform.position, -Vector3.forward);
+        //code
+        break;
+      case classType.Pawn:
+        //code
+        break;
+        
+    }*/
+  }
 
     // Update is called once per frame
     void Update()
     {
 
     }
-
-    /*  void OnDrawGizmos()
-      {
-          //OnDrawGizmosSelected.matrix = transform.localToWorldMatrix;
-         // Gizmos.DrawCube(Vector3.zero, Vector3.one);
-      }*/
-    void OnDrawGizmosSelected()
+  void OnDrawGizmosSelected()
+  {  
+    switch (ClassType)
     {
-        //Bishop
-        // Gizmos.DrawLine(transform.position, Vector3.one);
-        // Gizmos.DrawLine(transform.position, -Vector3.one);
-
-        //Rook
+      case classType.Bishop:
+        Gizmos.DrawLine(transform.position, Vector3.one);
+        Gizmos.DrawLine(transform.position, -Vector3.one);
+        //Gizmo code
+        break;
+      case classType.Horse:
+        //Gizmo code
+        break;
+      case classType.King:
+        //Gizmo code
+        break;
+      case classType.Queen:
+        //Gizmo code
+        break;
+      case classType.Rook:
+        //Gizmo code
         Gizmos.DrawLine(transform.position, Vector3.forward);
         Gizmos.DrawLine(transform.position, -Vector3.forward);
+        break;
+      case classType.Pawn:
+        //Gizmo code
+        break;
     }
+  }
 }
