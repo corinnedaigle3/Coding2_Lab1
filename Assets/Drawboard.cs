@@ -18,19 +18,15 @@ public class Drawboard : MonoBehaviour
 
     void OnDrawGizmos()
     {       
-        Vector2 startingPosY = new Vector2(2, 0);
-        Vector2 endingPosY = new Vector2(-2, 0);
+        Vector2 startingPosY = new Vector2(0, 0);
+        Vector2 endingPosY = new Vector2(0, -8);
+        Vector2 subtractY = new Vector2(1, 0);
 
-        Vector2 subtractX = new Vector2(0, -2);
-        Vector2 subtractY = new Vector2(0, -2);
+        Vector2 startingPosX = new Vector2(0, 0);
+        Vector2 endingPosX = new Vector2(-8, 0);
+        Vector2 subtractX = new Vector2(0, 1);
 
-        Vector2 startingPosX = new Vector2(0, 2);
-        Vector2 endingPosX = new Vector2(0, -2);
-
-        Vector2 subPosX = new Vector2(2, 0);
-        Vector2 subX = new Vector2(-2, 0);
-
-        for (int i = 0; i < 8; i++) 
+        for (int i = 0; i < 9; i++) 
         {
             Gizmos.DrawLine(startingPosY, endingPosY);
 
@@ -42,8 +38,8 @@ public class Drawboard : MonoBehaviour
         {
             Gizmos.DrawLine(startingPosX, endingPosX);
 
-            startingPosX -= subX;
-            endingPosX -= subX;
+            startingPosX -= subtractX;
+            endingPosX -= subtractX;
         }
         
     }
