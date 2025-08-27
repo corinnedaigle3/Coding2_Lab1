@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203262982}
   - component: {fileID: 1203262981}
+  - component: {fileID: 1203262983}
   m_Layer: 0
   m_Name: Chess_queen
   m_TagString: Untagged
@@ -206,6 +207,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203262983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203262979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassType: 3
 --- !u!1 &1397672130
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassType: 0
 --- !u!212 &1397672132
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -313,6 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414195453}
   - component: {fileID: 1414195452}
+  - component: {fileID: 1414195454}
   m_Layer: 0
   m_Name: Chess_horse
   m_TagString: Untagged
@@ -387,6 +403,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1414195454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414195450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassType: 1
 --- !u!1 &1414367147
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,6 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassType: 0
 --- !u!4 &1414367149
 Transform:
   m_ObjectHideFlags: 0
@@ -533,8 +563,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1734975238}
   - component: {fileID: 1734975237}
+  - component: {fileID: 1734975239}
   m_Layer: 0
-  m_Name: Chess_unknown
+  m_Name: Chess_pawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -607,6 +638,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734975239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734975235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassType: 5
 --- !u!1 &2018503064
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2018503067}
   - component: {fileID: 2018503066}
+  - component: {fileID: 2018503068}
   m_Layer: 0
   m_Name: Chess_rook
   m_TagString: Untagged
@@ -691,6 +736,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2018503068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018503064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassType: 4
 --- !u!1 &2146496896
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +760,7 @@ GameObject:
   - component: {fileID: 2146496899}
   - component: {fileID: 2146496898}
   - component: {fileID: 2146496900}
+  - component: {fileID: 2146496901}
   m_Layer: 0
   m_Name: Chess_king
   m_TagString: Untagged
@@ -788,6 +847,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassType: 2
+--- !u!114 &2146496901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2146496896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea3d238accd1c6d4b97a10758d8f7594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassType: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
