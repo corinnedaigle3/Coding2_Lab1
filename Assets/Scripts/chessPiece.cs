@@ -75,13 +75,14 @@ public class chessPiece : MonoBehaviour
     {
       case classType.Bishop:
        // selectedPiece = Instantiate(bishopPrefab, transform);
-       Vector3 bishopPoint = transform.position + Vector3.one * 8;
-       Vector3 bishopPoint2 = transform.position + -Vector3.one * 8;
-        Gizmos.DrawLine(transform.position, bishopPoint);
-        Gizmos.DrawLine(transform.position, -bishopPoint);
+       Vector3 bishopPoint = transform.position + new Vector3(8, 8, 0);
+       Vector3 bishopPoint2 = transform.position + new Vector3(-8, 8, 0);
+       Vector3 bishopPoint3 = transform.position + new Vector3(8, -8, 0);
+       Vector3 bishopPoint4 = transform.position + new Vector3(-8, -8, 0);
 
-        Gizmos.DrawLine(transform.position, bishopPoint2);
-       // Gizmos.DrawLine(transform.position, -bishopPoint2);
+       Gizmos.DrawLine(bishopPoint, bishopPoint4);
+       Gizmos.DrawLine(bishopPoint2, bishopPoint3);
+
         //Gizmo code
         break;
       case classType.Horse:
