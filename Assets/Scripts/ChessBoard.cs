@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drawboard : MonoBehaviour
+public class ChessBoard : MonoBehaviour
 {
     void OnDrawGizmos()
-    {       
+    {
         //Vectors for Y
         Vector2 startingPosY = new Vector2(0, 0);
         Vector2 endingPosY = new Vector2(0, -8);
@@ -17,16 +17,16 @@ public class Drawboard : MonoBehaviour
         Vector2 subtractX = new Vector2(0, 1);
 
         //Loop for Vertical Lines
-        for (int i = 0; i < 9; i++) 
+        for (int i = 0; i < 9; i++)
         {
             Gizmos.DrawLine(startingPosY, endingPosY);
 
             startingPosY -= subtractY;
             endingPosY -= subtractY;
         }
-        
+
         //Loop for Horizontal Lines
-        for (int j = 0; j <= 8; j++) 
+        for (int j = 0; j <= 8; j++)
         {
             Gizmos.DrawLine(startingPosX, endingPosX);
 

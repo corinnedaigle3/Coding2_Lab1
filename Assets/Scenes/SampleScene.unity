@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 603244350}
-  - component: {fileID: 603244349}
+  - component: {fileID: 603244351}
   m_Layer: 0
   m_Name: board
   m_TagString: Untagged
@@ -139,18 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &603244349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603244348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d76ce772a63770f4a9e9a22bc1eaab33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &603244350
 Transform:
   m_ObjectHideFlags: 0
@@ -166,6 +154,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603244351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603244348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f03b64354cc1a4bb2ff3a5f806852c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1027874256
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 1027874259}
   - component: {fileID: 1027874258}
   - component: {fileID: 1027874257}
+  - component: {fileID: 1027874260}
   m_Layer: 0
   m_Name: Chess_king
   m_TagString: Untagged
@@ -196,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7571a32363ff04c4c8d125a0cb7e935d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColor: {r: 0.72002715, g: 0.022012413, b: 1, a: 1}
+  changeColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &1027874258
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3e9a60a3a18a0ed4abbd015b0bf38050, type: 3}
-  m_Color: {r: 0.72002715, g: 0.022012413, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -264,6 +265,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027874260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027874256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68ef3f3eff033440a9faeaf3df36c50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: Queen
 --- !u!1 &1153387467
 GameObject:
   m_ObjectHideFlags: 0
