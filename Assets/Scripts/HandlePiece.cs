@@ -1,17 +1,17 @@
 using UnityEngine;
 using UnityEditor;
 
-public class ExampleScript : MonoBehaviour
+public class HandlePiece : MonoBehaviour
 {
     public string value;
 }
 
-[CustomEditor(typeof(ExampleScript))]
-public class ExampleEditor : Editor
+[CustomEditor(typeof(HandlePiece))]
+public class HandleEditor : Editor
 {
     public void OnSceneGUI()
     {
-        var t = target as ExampleScript;
+        var t = target as HandlePiece;
         var tr = t.transform;
         var pos = tr.position;
 
