@@ -6,6 +6,7 @@ public class chessPiece : MonoBehaviour
 {
   public enum classType
   {
+    None,
     Bishop,
     Horse,
     King,
@@ -13,6 +14,19 @@ public class chessPiece : MonoBehaviour
     Rook,
     Pawn
   }
+
+/*  private float Line = 8f;
+  private float kingLine = 1f;
+  private float pawnLine = 2f;*/
+
+/*  public GameObject bishop;
+  public GameObject horse;
+  public GameObject king;
+  public GameObject queen;
+  public GameObject rook;
+  public GameObject pawn;
+
+  private GameObject selectedPiece;*/
 
   //[SerializedField] classType ClassType = new classType();
   public classType ClassType = new classType();
@@ -51,32 +65,57 @@ public class chessPiece : MonoBehaviour
     {
 
     }
+   /* void UpdatePiece()
+    {
+      DestroyImmediate(selectedPiece);
+    }*/
   void OnDrawGizmosSelected()
   {  
     switch (ClassType)
     {
       case classType.Bishop:
-        Gizmos.DrawLine(transform.position, Vector3.one);
-        Gizmos.DrawLine(transform.position, -Vector3.one);
+       // selectedPiece = Instantiate(bishopPrefab, transform);
+       Vector3 bishopPoint = transform.position + Vector3.one * 8;
+       Vector3 bishopPoint2 = transform.position + -Vector3.one * 8;
+        Gizmos.DrawLine(transform.position, bishopPoint);
+        Gizmos.DrawLine(transform.position, -bishopPoint);
+
+        Gizmos.DrawLine(transform.position, bishopPoint2);
+       // Gizmos.DrawLine(transform.position, -bishopPoint2);
         //Gizmo code
         break;
       case classType.Horse:
+     // selectedPiece = Instantiate(horsePrefab, transform);
         //Gizmo code
         break;
       case classType.King:
+     // selectedPiece = Instantiate(kingPrefab, transform);
         //Gizmo code
         break;
       case classType.Queen:
+     // GameObject newQueen = Instantiate(queenPrefab, promotionPosition, Quaternion.identity);
+     // newQueen.GetComponent<ChessPiece>().currentPieceType = PieceType.Queen;
+     // selectedPiece = Instantiate(queenPrefab, transform);
         //Gizmo code
         break;
       case classType.Rook:
+     // selectedPiece = Instantiate(rookPrefab, transform);
         //Gizmo code
-        Gizmos.DrawLine(transform.position, Vector3.forward);
-        Gizmos.DrawLine(transform.position, -Vector3.forward);
+        Vector3 point = transform.position + transform.forward * 8;
+       // Vector3 point2 = transform.position - transform.forward * 16;
+        Gizmos.DrawLine(transform.position, point);
+       // Gizmos.DrawLine(transform.position, point);
+        
         break;
       case classType.Pawn:
+     // selectedPiece = Instantiate(pawnPrefab, transform);
         //Gizmo code
         break;
     }
   }
+
+/*  void onValidate()
+  {
+    DestroyImmediate(selectedPiece);
+  }*/
 }
